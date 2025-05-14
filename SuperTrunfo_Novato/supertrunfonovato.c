@@ -29,10 +29,10 @@ float area1, area2, pibpercapta1, pibpercapta2, populacaoporarea1, populacaopora
 printf ("##SuperTrunfo Mestre!##\n");
 
 //Declaração Atributos Carta 1
-printf ("Dados da Carta 1:\n");
+printf ("\n##Dados da Carta 1##\n");
 
 //Codigo da Carta:
-printf ("Codigo da Carta:\n");
+printf ("\nCodigo da Carta:\n");
 scanf ("%s", &codigocarta1);
 
 //Estado:
@@ -61,10 +61,10 @@ scanf ("%lf", &pib1);
 
 
 //Declaração Atributos Carta 2
-printf ("Dados da Carta 2:\n");
+printf ("\n##Dados da Carta 2##\n");
 
 //Codigo da Carta:
-printf ("Codigo da Carta:\n");
+printf ("\nCodigo da Carta:\n");
 scanf ("%s", &codigocarta2);
 
 //Estado:
@@ -99,31 +99,97 @@ populacaoporarea2 = populacao2 / area2;
 
 //Apresentação das Cartas:
 //Carta 1
-printf ("Carta %s\n",codigocarta1);
+printf ("\nCarta %s\n",codigocarta1);
 printf ("Estado: %s, Cidade: %s\n", estado1 ,cidade1);
 printf ("População: %lu\n", populacao1);
 printf ("Pontos Turisticos: %d\n", pontosturisticos1);
 printf ("Área: %.0f km²\n", area1);
-printf ("População por área: %.0f\n", populacaoporarea1);
 printf ("PIB: %.0f\n", pib1);
+printf ("População por área: %.0f\n", populacaoporarea1);
 printf ("PIB per capta: %.0f\n", pibpercapta1);
 
 //Carta 2
-printf ("Carta %s\n",codigocarta2);
-printf ("Estado: %s, Cidade: %s\n", estado1 ,cidade2);
-printf ("População: %lu\n", populacao1);
+printf ("\nCarta %s\n",codigocarta2);
+printf ("Estado: %s, Cidade: %s\n", estado2 ,cidade2);
+printf ("População: %lu\n", populacao2);
 printf ("Pontos Turisticos: %d\n", pontosturisticos2);
-printf ("Área: %.0f km²\n", area1);
-printf ("População por área: %.0f\n", populacaoporarea2);
+printf ("Área: %.0f km²\n", area2);
 printf ("PIB: %.0f\n", pib2);
+printf ("População por área: %.0f\n", populacaoporarea2);
 printf ("PIB per capta: %.0f\n", pibpercapta2);
 
+//Comparações das Cartas:
+printf ("\n##Comparação de Atributos!##\n");
+
+//População:
+printf ("\nPopulação:\n");
+
+    if(populacao1 > populacao2){
+    printf("Carta %s Vence!\n",codigocarta1);   
+    } else{
+    printf("Carta %s Vence!\n",codigocarta2);    
+    }
+
+//Pontos Turisticos
+printf ("\nPontos Turisticos:\n");
+
+    if(pontosturisticos1 > pontosturisticos2){
+    printf("Carta %s Vence!\n",codigocarta1);   
+    } else{
+    printf("Carta %s Vence!\n",codigocarta2);    
+    }
+
+//Área:
+printf ("\nÁrea:\n");
+
+    if(area1 > area2){
+    printf("Carta %s Vence!\n",codigocarta1);   
+    } else{
+    printf("Carta %s Vence!\n",codigocarta2);    
+    }
+
+//PIB:
+printf ("\nPIB:\n");
+
+    if(pib1 > pib2){
+    printf("Carta %s Vence!\n",codigocarta1);   
+    } else{
+    printf("Carta %s Vence!\n",codigocarta2);    
+    }
+
+//PIB per capta:
+printf ("\nPIB per capta:\n");
+
+    if(pibpercapta1 < pibpercapta2){
+    printf("Carta %s Vence!\n",codigocarta1);   
+    } else{
+    printf("Carta %s Vence!\n",codigocarta2);    
+    }
+
+//Popuiação por Área:    
+printf ("\nPopulação por Área:\n");
+
+    if(populacaoporarea1 < populacaoporarea2){
+    printf("Carta %s Vence!\n",codigocarta1);   
+    } else{
+    printf("Carta %s Vence!\n",codigocarta2);    
+    }    
+
+//Super-Poder:
+float superpoder1, superpoder2;
+superpoder1 = (float) area1 + populacao1 + pib1 + pibpercapta1 + pontosturisticos1 + populacaoporarea1;
+superpoder2 = (float) area2 + populacao2 + pib2 + pibpercapta2 + pontosturisticos2 + populacaoporarea2;
+
+printf ("\n##Super-Poder!##\n");
+
+    if(superpoder1 > superpoder2){
+    printf("Carta %s Vence!\n",codigocarta1);
+    } else{
+    printf("Carta %s Vence!\n",codigocarta2);
+    }
 
 
 
 
-
-
-
-
+return 0;
 }
