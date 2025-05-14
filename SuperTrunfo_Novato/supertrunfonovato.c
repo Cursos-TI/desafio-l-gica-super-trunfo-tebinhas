@@ -19,51 +19,104 @@ número de pontos turísticos
 */
 
 //Atributos:
-char cidadeA1[20], cidadeB1[20], estadoA1[20], estadoB1[20], codigocarta1[5], codigocarta2[5];
-int pontosturisticosA1, pontosturisticosB1;
-unsigned long int populacaoA1, populacaoB1;
-double pibA1, pibB1;
-float areaA1, areaB1, pibpercaptaA1, pibpercaptaB1, populacaoporareaA1, populacaoporareaB1;
+char cidade1[20], cidade2[20], estado1[20], estado2[20], codigocarta1[5], codigocarta2[5];
+int pontosturisticos1, pontosturisticos2;
+unsigned long int populacao1, populacao2;
+double pib1, pib2;
+float area1, area2, pibpercapta1, pibpercapta2, populacaoporarea1, populacaoporarea2;
 
-//Cadastro Primeiro Carta
+//Cadastro Carta 1
 printf ("##SuperTrunfo Mestre!##\n");
 
-//Declaração das Variaveis Primeira Carta
-printf ("Dados da Primeira Carta:\n");
+//Declaração Atributos Carta 1
+printf ("Dados da Carta 1:\n");
 
 //Codigo da Carta:
-printf ("Estado:\n");
+printf ("Codigo da Carta:\n");
 scanf ("%s", &codigocarta1);
 
 //Estado:
 printf ("Estado:\n");
-scanf ("%s", &estadoA1);
+scanf ("%s", &estado1);
 
 //Cidade
 printf ("Nome da Cidade:\n");
-scanf (" %[^\n]", &cidadeA1);
+scanf (" %[^\n]", &cidade1);
 
 //População
 printf ("População:\n");
-scanf ("%lu", &populacaoA1);
+scanf ("%lu", &populacao1);
 
 //Pontos Turisticos
 printf ("Pontos Turisticos:\n");
-scanf ("%d", &pontosturisticosA1);
+scanf ("%d", &pontosturisticos1);
 
 //Area
 printf ("Area da Cidade:\n");
-scanf ("%f", &areaA1);
+scanf ("%f", &area1);
 
 //PIB
 printf ("PIB da Cidade:\n");
-scanf ("%lf", &pibA1);
+scanf ("%lf", &pib1);
 
 
+//Declaração Atributos Carta 2
+printf ("Dados da Carta 2:\n");
 
+//Codigo da Carta:
+printf ("Codigo da Carta:\n");
+scanf ("%s", &codigocarta2);
 
+//Estado:
+printf ("Estado:\n");
+scanf ("%s", &estado2);
 
+//Cidade
+printf ("Nome da Cidade:\n");
+scanf (" %[^\n]", &cidade2);
 
+//População
+printf ("População:\n");
+scanf ("%lu", &populacao2);
+
+//Pontos Turisticos
+printf ("Pontos Turisticos:\n");
+scanf ("%d", &pontosturisticos2);
+
+//Area
+printf ("Area da Cidade:\n");
+scanf ("%f", &area2);
+
+//PIB
+printf ("PIB da Cidade:\n");
+scanf ("%lf", &pib2);
+
+//Calculo pibpercapta e densidade populacional
+pibpercapta1 = pib1 / populacao1;
+populacaoporarea1 = populacao1 / area1;
+pibpercapta2 = pib2 / populacao2;
+populacaoporarea2 = populacao2 / area2;
+
+//Apresentação das Cartas:
+//Carta 1
+printf ("Carta %s\n",codigocarta1);
+printf ("Estado: %s, Cidade: %s\n", estado1 ,cidade1);
+printf ("População: %lu\n", populacao1);
+printf ("Pontos Turisticos: %d\n", pontosturisticos1);
+printf ("Área: %.0f km²\n", area1);
+printf ("População por área: %.0f\n", populacaoporarea1);
+printf ("PIB: %.0f\n", pib1);
+printf ("PIB per capta: %.0f\n", pibpercapta1);
+
+//Carta 2
+printf ("Carta %s\n",codigocarta2);
+printf ("Estado: %s, Cidade: %s\n", estado1 ,cidade2);
+printf ("População: %lu\n", populacao1);
+printf ("Pontos Turisticos: %d\n", pontosturisticos2);
+printf ("Área: %.0f km²\n", area1);
+printf ("População por área: %.0f\n", populacaoporarea2);
+printf ("PIB: %.0f\n", pib2);
+printf ("PIB per capta: %.0f\n", pibpercapta2);
 
 
 
